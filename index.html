@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRAZY STORY</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>CRAZY STORY</h1>
+	<div class="form-style-3">
+         <form id="form">
+             <fieldset>
+
+               <label for="qAdjective1"><span>Adjective #1:</span></label>
+               <input type="text" id="qAdjective1">
+
+               <label for="wAdjective2"><span>Adjective #2:</span></label>
+               <input type="text" id="wAdjective2">
+
+               <label for="eAdjective3"><span>Adjective #3:</span></label>
+               <input type="text" id="eAdjective3">
+
+               <label for="rAdjective4"><span>Adjective #4:</span></label>
+               <input type="text" id="rAdjective4">
+
+               <label for="tAnimal1"><span>Animal #1:</span></label>
+               <input type="text" id="tAnimal1">
+
+               <label for="yAnimal2"><span>Animal #2:</span></label>
+               <input type="text" id="yAnimal2">
+
+               <label for="uFunnyNoise1"><span>Funny Noise #1:</span></label>
+               <input type="text" id="uFunnyNoise1">
+
+               <label for="iFunnuyNoise2"><span>Funny Noise #2:</span></label>
+               <input type="text" id="iFunnyNoise2">
+
+               <label for="oPartoftheBody"><span>Part of the Body:</span></label>
+               <input type="text" id="oPartoftheBody">
+
+               <label for="pPluralAnimal"><span>Plural Animal:</span></label>
+               <input type="text" id="pPluralAnimal">
+
+               <label for="aPluralNoun1"><span>Plural Noun #1:</span></label>
+               <input type="text" id="aPluralNoun1">
+
+               <label for="sPluralNoun2"><span>Plural Noun #2:</span></label>
+               <input type="text" id="sPluralNoun2">
+
+               <label for="dPluralNoun3"><span>Plural Noun #3:</span></label>
+               <input type="text" id="dPluralNoun3">
+
+               <label for="fTypeofLiquid"><span>Type of Liquid:</span></label>
+               <input type="text" id="fTypeofLiquid">
+
+               <button type="button" onclick="makestory()">click me if you dare</button>
+          </fieldset>
+     </form>
+
+</div>
+<div id="output"></div>
+<div id="paststories"></div>
+
+
+<script>
+     var paststories = document.getElementById('paststories');
+     for (var i = 0; i < 10; i++) { 
+     var pastStory =localStorage.getItem(localStorage.key(i));
+       paststories.insertAdjacentHTML('beforeend', `<p>${pastStory}</p>`);}
+
+
+     function makestory() { 
+
+
+          const form = document.getElementById('form')
+
+          const output = document.getElementById('output')
+
+          const qAdjective1= document.getElementById('qAdjective1');
+
+          const wAdjective2= document.getElementById('wAdjective2');
+
+          const eAdjective3= document.getElementById('eAdjective3');
+
+          const rAdjective4= document.getElementById('rAdjective4');
+
+          const tAnimal1= document.getElementById('tAnimal1');
+
+          const yAnimal2= document.getElementById('yAnimal2');
+
+          const uFunnyNoise1 = document.getElementById('uFunnyNoise1');
+
+          const iFunnyNoise2 = document.getElementById('iFunnyNoise2');
+
+          const oPartoftheBody= document.getElementById('oPartoftheBody');
+
+          const pPluralAnimal= document.getElementById('pPluralAnimal');
+
+          const aPluralNoun1= document.getElementById('aPluralNoun1');
+
+          const sPluralNoun2= document.getElementById('sPluralNoun2');
+
+          const dPluralNoun3= document.getElementById('dPluralNoun3');
+
+          const fTypeofLiquid= document.getElementById('fTypeofLiquid');
+
+
+
+
+          const story=`Zoos are places where wild ${aPluralNoun1.value} are kept in pens or cages. ${sPluralNoun2.value.charAt(0).toUpperCase() + sPluralNoun2.value.slice(1)} can come and look at them. There are two
+          zoos in New York, one in the Bronx and one in ${qAdjective1.value} Park.
+          The Park zoo is built around a large pond filled with clear sparkling ${fTypeofLiquid.value} You will see several ${pPluralAnimal.value} swimming in the pond and eating fish. When it is feeding time, all of the animals make ${wAdjective2.value} noises. The elephant goes ${uFunnyNoise1.value} and the turtledoves go ${iFunnyNoise2.value} In one part of the zoo, there are  ${eAdjective3.value} gorillas who love to eat  ${sPluralNoun2.value} In another building, there is a spotted African ${tAnimal1.value} that is so fast it can outrun a ${yAnimal2.value} But my favorite animal is the hippopotamus. It has a huge ${oPartoftheBody.value} and eats fifty pounds of ${dPluralNoun3.value} a day. You would never know that, technically, it is nothing but an oversized ${rAdjective4.value} pig and naturally Fede is the best.`
+
+          output.innerHTML = story;
+          output.insertAdjacentHTML('beforeend',`<a href="index.html">do again</a>`)
+          form.style.display ='none';
+          paststories.style.display ='none';
+
+          console.log(window.localStorage);
+          localStorage.setItem(Date.now(), story);
+     };
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
