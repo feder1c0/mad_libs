@@ -58,8 +58,8 @@
 
 </div>
 
-<iframe src="https://giphy.com/embed/RQNJuKiYCPap2" width="343" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-tiger-zoo-RQNJuKiYCPap2">via GIPHY</a></p>
 <div id="output"></div>
+<h1>PAST STORIES</h1>
 <div id="paststories"></div>
 
 
@@ -110,11 +110,12 @@
 
           const story=`Zoos are places where wild ${aPluralNoun1.value} are kept in pens or cages. ${sPluralNoun2.value.charAt(0).toUpperCase() + sPluralNoun2.value.slice(1)} can come and look at them. There are two
           zoos in New York, one in the Bronx and one in ${qAdjective1.value} Park.
-          The Park zoo is built around a large pond filled with clear sparkling ${fTypeofLiquid.value} You will see several ${pPluralAnimal.value} swimming in the pond and eating fish. When it is feeding time, all of the animals make ${wAdjective2.value} noises. The elephant goes ${uFunnyNoise1.value} and the turtledoves go ${iFunnyNoise2.value} In one part of the zoo, there are  ${eAdjective3.value} gorillas who love to eat  ${sPluralNoun2.value} In another building, there is a spotted African ${tAnimal1.value} that is so fast it can outrun a ${yAnimal2.value} But my favorite animal is the hippopotamus. It has a huge ${oPartoftheBody.value} and eats fifty pounds of ${dPluralNoun3.value} a day. You would never know that, technically, it is nothing but an oversized ${rAdjective4.value} pig and naturally Fede is the best.`
+          The Park zoo is built around a large pond filled with clear sparkling ${fTypeofLiquid.value} You will see several ${pPluralAnimal.value} swimming in the pond and eating fish. When it is feeding time, all of the animals make ${wAdjective2.value} noises. The elephant goes ${uFunnyNoise1.value} and the turtledoves go ${iFunnyNoise2.value}. In one part of the zoo, there are  ${eAdjective3.value} gorillas who love to eat  ${sPluralNoun2.value} In another building, there is a spotted African ${tAnimal1.value} that is so fast it can outrun a ${yAnimal2.value} But my favorite animal is the hippopotamus. It has a huge ${oPartoftheBody.value} and eats fifty pounds of ${dPluralNoun3.value} a day. You would never know that, technically, it is nothing but an oversized ${rAdjective4.value} pig and naturally Fede is the best.`
+      
 
           output.innerHTML = story;
-          output.insertAdjacentHTML('beforeend',`<a href="index.html">do again</a>`)
-          form.style.display ='none';
+          output.insertAdjacentHTML('beforeend',` <a href="index.html" class="button"> try again</a>`)
+        form.style.display ='none';
           paststories.style.display ='none';
 
           console.log(window.localStorage);

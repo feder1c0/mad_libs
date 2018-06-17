@@ -1,6 +1,10 @@
+body{
+    background-image: url(animal.gif);
+}
+
 h1 {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    margin: 30px 450px ;
+    margin: 130px 450px ;
   font-weight: bold; 
   font-size: 43px; 
      max-width: 600px;
@@ -10,11 +14,13 @@ h1 {
 .form-style-3{
     max-width: 600px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    margin: 30px auto;
+    margin-top: 190px;
+    margin-left: 300px
 
 }
 .form-style-3 label{
     display:block;
+    
     margin-bottom: 10px;
 }
 .form-style-3 label > span{
@@ -81,7 +87,8 @@ h1 {
     width:50%;
 }
 
-.form-style-3  button[type=button]{
+
+.form-style-3  button[type=button], .button {
     background: #ffad33;
     border: 1px solid #C94A81;
     padding: 5px 15px 5px 15px;
